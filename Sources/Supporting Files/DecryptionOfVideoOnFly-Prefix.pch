@@ -1,0 +1,38 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_6_0
+#warning "This project uses features only available in iOS SDK 6.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+// Embeded Libraries
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+
+// External Libraries
+#import "DPLog.h"
+#import "MBProgressHUD.h"
+#import "Reachability.h"
+
+
+// Base Headers and Elements
+#import "AppDelegate.h"
+#import "GitVersion.h"
+#import "BasicDefines.h"
+#import "CustomBlocks.h"
+
+
+// Custom Elements
+#import "CustomNavigationController.h"
+#import "MainViewController.h"
+
+
+#endif

@@ -1,0 +1,9 @@
+
+/*
+ *  ============================================================================
+ *      INFO . PLIST
+ *  ============================================================================
+ */
+
+CFBundleDisplayName = "Video on Fly"; // don't forget enable the "Application has localized display name"
+CFBundleExecutable = "DecryptionOfVideoOnFly";

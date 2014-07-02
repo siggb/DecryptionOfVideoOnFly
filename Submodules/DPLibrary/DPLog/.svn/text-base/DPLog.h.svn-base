@@ -1,0 +1,40 @@
+//
+//  DPLog.h
+//  Created by sig
+//
+//  DigiPeople Inc.
+//
+//  Copyright (c) 2013. All rights reserved.
+
+#import <Foundation/Foundation.h>
+
+
+// Ставим в 0, когда делаем сборку приложения.
+// Иначе, рискуем сильно нагрузить систему из-за проверок условий логирования.
+#define DEBUG_MODE 1
+
+
+
+@interface DPLog : NSObject
+
+#if DEBUG_MODE == 1
+
+// Логирование :: <функция> + <текст>
++ (void)shouldLog:(int)shouldLog function:(char*)functionName format:(NSString*)format, ...;
+#define DPLog(n,s,...) [DPLog shouldLog:n function: (char *)__FUNCTION__ format:(s),##__VA_ARGS__]
+
+// Логирование :: <файл> + <строка> + <текст>
++ (void)shouldLog:(int)shouldLog file:(char*)sourceFile lineNumber:(int)lineNumber format:(NSString*)format, ...;
+#define DPLogFile(n,s,...) [DPLog shouldLog:n  file:__FILE__ lineNumber:__LINE__ format:(s),##__VA_ARGS__]
+
+// Логирование :: <файл> + <строка> + <функция> + <текст>
++ (void)shouldLog:(int)shouldLog file:(char*)sourceFile function:(char*)functionName lineNumber:(int)lineNumber format:(NSString*)format, ...;
+#define DPLogFull(n,s,...) [DPLog shouldLog:n  file:__FILE__ function: (char *)__FUNCTION__ lineNumber:__LINE__ format:(s),##__VA_ARGS__]
+
+#else
+    #define DPLog(n,s,...) 
+    #define DPLogFile(n,s,...)
+    #define DPLogFull(n,s,...)
+#endif
+
+@end
