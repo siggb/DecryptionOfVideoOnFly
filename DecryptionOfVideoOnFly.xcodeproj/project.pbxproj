@@ -63,10 +63,6 @@
 		0B8933D01964812B00D33EEB /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89337F1964812B00D33EEB /* GCDWebServerFileResponse.m */; };
 		0B8933D11964812B00D33EEB /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8933811964812B00D33EEB /* GCDWebServerStreamedResponse.m */; };
 		0B8933D21964812B00D33EEB /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8933811964812B00D33EEB /* GCDWebServerStreamedResponse.m */; };
-		0B8933D31964812B00D33EEB /* GCDWebUploader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B8933831964812B00D33EEB /* GCDWebUploader.bundle */; };
-		0B8933D41964812B00D33EEB /* GCDWebUploader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B8933831964812B00D33EEB /* GCDWebUploader.bundle */; };
-		0B8933D51964812B00D33EEB /* GCDWebUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8933851964812B00D33EEB /* GCDWebUploader.m */; };
-		0B8933D61964812B00D33EEB /* GCDWebUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8933851964812B00D33EEB /* GCDWebUploader.m */; };
 		0B8933D71964812B00D33EEB /* CLIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8933891964812B00D33EEB /* CLIColor.m */; };
 		0B8933D81964812B00D33EEB /* CLIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8933891964812B00D33EEB /* CLIColor.m */; };
 		0B8933D91964812B00D33EEB /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B89338B1964812B00D33EEB /* DDAbstractDatabaseLogger.m */; };
@@ -170,9 +166,6 @@
 		0B89337F1964812B00D33EEB /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFileResponse.m; sourceTree = "<group>"; };
 		0B8933801964812B00D33EEB /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerStreamedResponse.h; sourceTree = "<group>"; };
 		0B8933811964812B00D33EEB /* GCDWebServerStreamedResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerStreamedResponse.m; sourceTree = "<group>"; };
-		0B8933831964812B00D33EEB /* GCDWebUploader.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GCDWebUploader.bundle; sourceTree = "<group>"; };
-		0B8933841964812B00D33EEB /* GCDWebUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebUploader.h; sourceTree = "<group>"; };
-		0B8933851964812B00D33EEB /* GCDWebUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebUploader.m; sourceTree = "<group>"; };
 		0B8933881964812B00D33EEB /* CLIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLIColor.h; sourceTree = "<group>"; };
 		0B8933891964812B00D33EEB /* CLIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLIColor.m; sourceTree = "<group>"; };
 		0B89338A1964812B00D33EEB /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
@@ -393,7 +386,6 @@
 			children = (
 				0B89335F1964812B00D33EEB /* GCDWebDAVServer */,
 				0B8933621964812B00D33EEB /* GCDWebServer */,
-				0B8933821964812B00D33EEB /* GCDWebUploader */,
 			);
 			path = GCDWebLibrary;
 			sourceTree = "<group>";
@@ -464,16 +456,6 @@
 				0B8933811964812B00D33EEB /* GCDWebServerStreamedResponse.m */,
 			);
 			path = Responses;
-			sourceTree = "<group>";
-		};
-		0B8933821964812B00D33EEB /* GCDWebUploader */ = {
-			isa = PBXGroup;
-			children = (
-				0B8933831964812B00D33EEB /* GCDWebUploader.bundle */,
-				0B8933841964812B00D33EEB /* GCDWebUploader.h */,
-				0B8933851964812B00D33EEB /* GCDWebUploader.m */,
-			);
-			path = GCDWebUploader;
 			sourceTree = "<group>";
 		};
 		0B8933861964812B00D33EEB /* Lumberjack */ = {
@@ -628,7 +610,6 @@
 				0B8933B11964812B00D33EEB /* Localizable.strings in Resources */,
 				0B8933A51964812B00D33EEB /* README.md in Resources */,
 				0B8933AF1964812B00D33EEB /* InfoPlist.strings in Resources */,
-				0B8933D31964812B00D33EEB /* GCDWebUploader.bundle in Resources */,
 				0B8933AD1964812B00D33EEB /* DecryptionOfVideoOnFly-Info.plist in Resources */,
 				0B8933EB1964812B00D33EEB /* README.txt in Resources */,
 				0B8933A71964812B00D33EEB /* Images.xcassets in Resources */,
@@ -644,7 +625,6 @@
 				0B8933B21964812B00D33EEB /* Localizable.strings in Resources */,
 				0B8933A61964812B00D33EEB /* README.md in Resources */,
 				0B32A86719647F39005074CE /* InfoPlist.strings in Resources */,
-				0B8933D41964812B00D33EEB /* GCDWebUploader.bundle in Resources */,
 				0B8933F3196481D500D33EEB /* Pages.storyboard in Resources */,
 				0B8933AE1964812B00D33EEB /* DecryptionOfVideoOnFly-Info.plist in Resources */,
 				0B8933EC1964812B00D33EEB /* README.txt in Resources */,
@@ -691,7 +671,6 @@
 				0B8933B51964812B00D33EEB /* DPLog.m in Sources */,
 				0B8933D11964812B00D33EEB /* GCDWebServerStreamedResponse.m in Sources */,
 				0B8933E11964812B00D33EEB /* DDLog.m in Sources */,
-				0B8933D51964812B00D33EEB /* GCDWebUploader.m in Sources */,
 				0B8933D71964812B00D33EEB /* CLIColor.m in Sources */,
 				0B8933B91964812B00D33EEB /* GCDWebServer.m in Sources */,
 				0B8933C31964812B00D33EEB /* GCDWebServerDataRequest.m in Sources */,
@@ -748,7 +727,6 @@
 				0B32A86919647F39005074CE /* DecryptionOfVideoOnFlyTests.m in Sources */,
 				0B8933C61964812B00D33EEB /* GCDWebServerFileRequest.m in Sources */,
 				0B8933DC1964812B00D33EEB /* DDASLLogCapture.m in Sources */,
-				0B8933D61964812B00D33EEB /* GCDWebUploader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

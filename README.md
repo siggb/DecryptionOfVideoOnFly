@@ -6,7 +6,7 @@ Info here ...
 
 * Xcode 5 or higher
 * Apple LLVM compiler
-* iOS 7.0 or higher
+* iOS 6.0 or higher
 * ARC
 
 ### Example Usage
@@ -18,7 +18,7 @@ Info here ...
 
 ### License
 
-Keen Listener is available under the MIT license.
+Decryption Of Video On Fly is available under the MIT license.
 
 Copyright © 2013 Ildar Sibagatov.
 
