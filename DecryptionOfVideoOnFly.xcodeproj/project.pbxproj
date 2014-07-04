@@ -15,6 +15,10 @@
 		0B32A85F19647F39005074CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B32A84119647F39005074CE /* UIKit.framework */; };
 		0B32A86719647F39005074CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B32A86519647F39005074CE /* InfoPlist.strings */; };
 		0B32A86919647F39005074CE /* DecryptionOfVideoOnFlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B32A86819647F39005074CE /* DecryptionOfVideoOnFlyTests.m */; };
+		0B572AFF1966B37C0088DFE4 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0B572AFE1966B37C0088DFE4 /* video.mov */; };
+		0B572B001966B37C0088DFE4 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0B572AFE1966B37C0088DFE4 /* video.mov */; };
+		0B572B0F1966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B572B0E1966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.m */; };
+		0B572B101966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B572B0E1966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.m */; };
 		0B6EA1E719648606004DCAB6 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EA1E319648606004DCAB6 /* IntroViewController.m */; };
 		0B6EA1E819648606004DCAB6 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EA1E319648606004DCAB6 /* IntroViewController.m */; };
 		0B6EA1E919648606004DCAB6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6EA1E619648606004DCAB6 /* MainViewController.m */; };
@@ -118,6 +122,9 @@
 		0B32A86419647F39005074CE /* DecryptionOfVideoOnFlyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DecryptionOfVideoOnFlyTests-Info.plist"; sourceTree = "<group>"; };
 		0B32A86619647F39005074CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B32A86819647F39005074CE /* DecryptionOfVideoOnFlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecryptionOfVideoOnFlyTests.m; sourceTree = "<group>"; };
+		0B572AFE1966B37C0088DFE4 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		0B572B0D1966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFileResponseWithDecryption.h; sourceTree = "<group>"; };
+		0B572B0E1966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFileResponseWithDecryption.m; sourceTree = "<group>"; };
 		0B6EA1E219648606004DCAB6 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		0B6EA1E319648606004DCAB6 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		0B6EA1E519648606004DCAB6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -281,6 +288,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0B572AFD1966B37C0088DFE4 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B572AFE1966B37C0088DFE4 /* video.mov */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		0B6EA1E119648606004DCAB6 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,17 +317,10 @@
 		0B8933451964812B00D33EEB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0B8933461964812B00D33EEB /* Files */,
+				0B572AFD1966B37C0088DFE4 /* Files */,
 				0B8933471964812B00D33EEB /* Images.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		0B8933461964812B00D33EEB /* Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Files;
 			sourceTree = "<group>";
 		};
 		0B8933481964812B00D33EEB /* Sources */ = {
@@ -526,6 +534,8 @@
 			children = (
 				0B8933FA196483CC00D33EEB /* CustomNavigationController.h */,
 				0B8933FB196483CC00D33EEB /* CustomNavigationController.m */,
+				0B572B0D1966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.h */,
+				0B572B0E1966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.m */,
 			);
 			path = Customs;
 			sourceTree = "<group>";
@@ -607,6 +617,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B572AFF1966B37C0088DFE4 /* video.mov in Resources */,
 				0B8933B11964812B00D33EEB /* Localizable.strings in Resources */,
 				0B8933A51964812B00D33EEB /* README.md in Resources */,
 				0B8933AF1964812B00D33EEB /* InfoPlist.strings in Resources */,
@@ -625,6 +636,7 @@
 				0B8933B21964812B00D33EEB /* Localizable.strings in Resources */,
 				0B8933A61964812B00D33EEB /* README.md in Resources */,
 				0B32A86719647F39005074CE /* InfoPlist.strings in Resources */,
+				0B572B001966B37C0088DFE4 /* video.mov in Resources */,
 				0B8933F3196481D500D33EEB /* Pages.storyboard in Resources */,
 				0B8933AE1964812B00D33EEB /* DecryptionOfVideoOnFly-Info.plist in Resources */,
 				0B8933EC1964812B00D33EEB /* README.txt in Resources */,
@@ -684,6 +696,7 @@
 				0B8933E71964812B00D33EEB /* DDDispatchQueueLogFormatter.m in Sources */,
 				0B6EA1E719648606004DCAB6 /* IntroViewController.m in Sources */,
 				0B8933CF1964812B00D33EEB /* GCDWebServerFileResponse.m in Sources */,
+				0B572B0F1966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.m in Sources */,
 				0B8933CB1964812B00D33EEB /* GCDWebServerDataResponse.m in Sources */,
 				0B8933BD1964812B00D33EEB /* GCDWebServerFunctions.m in Sources */,
 				0B8933A91964812B00D33EEB /* AppDelegate.m in Sources */,
@@ -704,6 +717,7 @@
 				0B6EA1EA19648606004DCAB6 /* MainViewController.m in Sources */,
 				0B8933B81964812B00D33EEB /* GCDWebDAVServer.m in Sources */,
 				0B8933C41964812B00D33EEB /* GCDWebServerDataRequest.m in Sources */,
+				0B572B101966BF310088DFE4 /* GCDWebServerFileResponseWithDecryption.m in Sources */,
 				0B8933D01964812B00D33EEB /* GCDWebServerFileResponse.m in Sources */,
 				0B8933DE1964812B00D33EEB /* DDASLLogger.m in Sources */,
 				0B8933E61964812B00D33EEB /* DDContextFilterLogFormatter.m in Sources */,

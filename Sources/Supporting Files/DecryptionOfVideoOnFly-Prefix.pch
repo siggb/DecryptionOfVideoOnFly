@@ -15,12 +15,17 @@
 // Embeded Libraries
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 
 // External Libraries
 #import "DPLog.h"
 #import "MBProgressHUD.h"
 #import "Reachability.h"
+
+#import "GCDWebServer.h"
+#import "GCDWebServerFileRequest.h"
+#import "GCDWebServerFileResponse.h"
 
 
 // Base Headers and Elements
