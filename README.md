@@ -1,6 +1,8 @@
 ## Decryption Of Video On Fly
 
-Info here ...
+So, we have encoded video file (for example, with XOR function: ```XOR(byte_from_file, byte_from_key)```). The main idea is to decode video-stream on fly. 
+
+For this we'll need built-in simple HTTP web-server in our app. Our app receive encrypted stream, decrypt it and stream again through built-in HTTP-server.
 
 ### Requirements
 
@@ -11,9 +13,44 @@ Info here ...
 
 ### Example Usage
 
+Initializing of web-server [here](https://github.com/siggb/DecryptionOfVideoOnFly/blob/master/Sources/Pages/Main/MainViewController.m):
 ```objective-c
-// Coming soon
-// ...
+    webServer = [[GCDWebServer alloc] init];
+    [webServer addDefaultHandlerForMethod:@"GET"
+                             requestClass:[GCDWebServerRequest class]
+                             processBlock:^GCDWebServerResponse *(GCDWebServerRequest* request) {
+                                 DPLogFast(@"request : %@", request);
+                                 GCDWebServerFileResponseWithDecryption *response = [GCDWebServerFileResponseWithDecryption responseWithFile:[[NSBundle mainBundle] pathForResource:@"video" ofType:@"mov"]
+                                                                                                                                   byteRange:[request byteRange]
+                                                                                                                                isAttachment:NO];
+                                 DPLogFast(@"response : %@", response);
+                                 return response;
+                             }];
+```
+
+Redefenition of read-data method [here](https://github.com/siggb/DecryptionOfVideoOnFly/blob/master/Sources/Customs/GCDWebServerFileResponseWithDecryption.m):
+```objective-c
+- (NSData*)readData:(NSError**)error
+{
+    NSData* data = [super readData:error];
+    
+    // decoding part
+    NSData *key_data = [@"KEYKEYKEYKEYKEYKEYKEYKEYKEY" dataUsingEncoding:NSUTF8StringEncoding];
+    uint8_t *bytes = (uint8_t *)data.bytes;
+    uint8_t *key_bytes = (uint8_t *)key_data.bytes;
+    
+    NSMutableData *m_file_data = [NSMutableData dataWithCapacity:data.length];
+    for (int i = 0, j= 0; i < data.length; i++, j++) {
+        
+        if (j >= key_data.length)
+            j = 0;
+        
+        uint8_t m_byte = bytes[i] ^ key_bytes[j];
+        [m_file_data appendBytes:&m_byte length:1];
+    }
+    
+    return ARC_AUTORELEASE(m_file_data);
+}
 ```
 
 ### License
