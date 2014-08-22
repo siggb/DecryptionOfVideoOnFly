@@ -2,7 +2,7 @@
 
 So, we have encoded video file (for example, with XOR function: ```XOR(byte_from_file, byte_from_key)```). The main idea is to decode video-stream on fly. 
 
-For this we'll need built-in simple HTTP web-server in our app. Our app receive encrypted stream, decrypt it and stream again through built-in HTTP-server.
+For this we'll need built-in simple HTTP [web-server](https://github.com/swisspol/GCDWebServer) in our app. Our app receive encrypted stream, decrypt it and stream again through built-in HTTP-server.
 
 ### Requirements
 
